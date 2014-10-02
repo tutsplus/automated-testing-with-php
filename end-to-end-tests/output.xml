@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140920 09:41:46.731" generator="Robot 2.8.5 (Python 2.7.7 on linux2)">
+<suite source="/media/medium/Csaba_Home_Extra/Personal/ScreenCasts/Automated Testing with PHP/SourceCode/Automated Testing in PHP/end-to-end-tests/math_lib_tests" id="s1" name="Math Lib Tests">
+<suite source="/media/medium/Csaba_Home_Extra/Personal/ScreenCasts/Automated Testing with PHP/SourceCode/Automated Testing in PHP/end-to-end-tests/math_lib_tests/math_lib.robot" id="s1-s1" name="Math Lib">
+<kw type="setup" name="resource.Start Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${MATHLIB URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:46.804" level="INFO">Opening browser 'chrome' to base url 'http://localhost:63342/Automated%20Testing%20in%20PHP/src/index.php#'</msg>
+<status status="PASS" endtime="20140920 09:41:49.103" starttime="20140920 09:41:46.804"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20140920 09:41:49.104" starttime="20140920 09:41:49.104"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:49.104" starttime="20140920 09:41:46.803"></status>
+</kw>
+<test id="s1-s1-t1" name="Double of 2 is 4">
+<kw type="setup" name="resource.Go To Mathematical Library Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MATHLIB URL}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:49.107" level="INFO">Opening url 'http://localhost:63342/Automated%20Testing%20in%20PHP/src/index.php#'</msg>
+<status status="PASS" endtime="20140920 09:41:50.092" starttime="20140920 09:41:49.107"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MathLib</arg>
+</arguments>
+<msg timestamp="20140920 09:41:50.096" level="INFO">Page title is 'MathLib'.</msg>
+<status status="PASS" endtime="20140920 09:41:50.096" starttime="20140920 09:41:50.093"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:50.097" starttime="20140920 09:41:49.106"></status>
+</kw>
+<kw type="kw" name="Should be Able to Double a Number">
+<doc></doc>
+<arguments>
+<arg>2</arg>
+<arg>4</arg>
+</arguments>
+<kw type="kw" name="resource.Input Number for Double">
+<doc></doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>number</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:50.099" level="INFO">Typing text '2' into text field 'number'</msg>
+<status status="PASS" endtime="20140920 09:41:50.160" starttime="20140920 09:41:50.098"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:50.160" starttime="20140920 09:41:50.097"></status>
+</kw>
+<kw type="kw" name="resource.Submit for Computation">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Submit Form">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>double</arg>
+</arguments>
+<msg timestamp="20140920 09:41:50.161" level="INFO">Submitting form 'double'.</msg>
+<status status="PASS" endtime="20140920 09:41:51.120" starttime="20140920 09:41:50.161"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:51.121" starttime="20140920 09:41:50.160"></status>
+</kw>
+<kw type="kw" name="resource.Result Should be">
+<doc></doc>
+<arguments>
+<arg>${expectedResult}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${expectedResult}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:51.134" level="INFO">Current page contains text '4'.</msg>
+<status status="PASS" endtime="20140920 09:41:51.134" starttime="20140920 09:41:51.122"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:51.135" starttime="20140920 09:41:51.121"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:51.135" starttime="20140920 09:41:50.097"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140920 09:41:51.135" critical="yes" starttime="20140920 09:41:49.105"></status>
+</test>
+<test id="s1-s1-t2" name="Double of 3 is 7">
+<kw type="setup" name="resource.Go To Mathematical Library Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${MATHLIB URL}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:51.136" level="INFO">Opening url 'http://localhost:63342/Automated%20Testing%20in%20PHP/src/index.php#'</msg>
+<status status="PASS" endtime="20140920 09:41:52.095" starttime="20140920 09:41:51.136"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>MathLib</arg>
+</arguments>
+<msg timestamp="20140920 09:41:52.099" level="INFO">Page title is 'MathLib'.</msg>
+<status status="PASS" endtime="20140920 09:41:52.099" starttime="20140920 09:41:52.096"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:52.099" starttime="20140920 09:41:51.136"></status>
+</kw>
+<kw type="kw" name="Should be Able to Double a Number">
+<doc></doc>
+<arguments>
+<arg>3</arg>
+<arg>7</arg>
+</arguments>
+<kw type="kw" name="resource.Input Number for Double">
+<doc></doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>number</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:52.101" level="INFO">Typing text '3' into text field 'number'</msg>
+<status status="PASS" endtime="20140920 09:41:52.156" starttime="20140920 09:41:52.101"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:52.156" starttime="20140920 09:41:52.100"></status>
+</kw>
+<kw type="kw" name="resource.Submit for Computation">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Submit Form">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>double</arg>
+</arguments>
+<msg timestamp="20140920 09:41:52.157" level="INFO">Submitting form 'double'.</msg>
+<status status="PASS" endtime="20140920 09:41:53.098" starttime="20140920 09:41:52.157"></status>
+</kw>
+<status status="PASS" endtime="20140920 09:41:53.098" starttime="20140920 09:41:52.157"></status>
+</kw>
+<kw type="kw" name="resource.Result Should be">
+<doc></doc>
+<arguments>
+<arg>${expectedResult}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${expectedResult}</arg>
+</arguments>
+<msg timestamp="20140920 09:41:53.123" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
+	&lt;title&gt;MathLib&lt;/title&gt;
+	&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form name="double" action="#" method="POST"&gt;
+	&lt;label for="number"&gt;Number: &lt;/label&gt;
+	&lt;input id="number" type="text" name="number" /&gt;
+	&lt;input type="submit" name="Double it" value="Double it" /&gt;
+&lt;/form&gt;
+
+
+	&lt;p&gt;
+		The double of 3 is 6.
+	&lt;/p&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;</msg>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20140920 09:41:53.334" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20140920 09:41:53.335" starttime="20140920 09:41:53.123"></status>
+</kw>
+<msg timestamp="20140920 09:41:53.335" level="FAIL">Page should have contained text '7' but did not</msg>
+<status status="FAIL" endtime="20140920 09:41:53.335" starttime="20140920 09:41:53.099"></status>
+</kw>
+<status status="FAIL" endtime="20140920 09:41:53.335" starttime="20140920 09:41:53.098"></status>
+</kw>
+<status status="FAIL" endtime="20140920 09:41:53.336" starttime="20140920 09:41:52.099"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20140920 09:41:53.336" critical="yes" starttime="20140920 09:41:51.135">Page should have contained text '7' but did not</status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140920 09:41:53.390" starttime="20140920 09:41:53.336"></status>
+</kw>
+<doc>A test suite with a single test for doubling numbers.</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20140920 09:41:53.390" starttime="20140920 09:41:46.752"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20140920 09:41:53.391" starttime="20140920 09:41:46.731"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="1" id="s1" name="Math Lib Tests">Math Lib Tests</stat>
+<stat fail="1" pass="1" id="s1-s1" name="Math Lib">Math Lib Tests.Math Lib</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

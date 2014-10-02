@@ -1,0 +1,16 @@
+{
+	"name": "vendor_name/package_name",
+	"description": "description_text",
+	"minimum-stability": "stable",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "author's name",
+			"email": "email@example.com"
+		}
+	],
+	"require": {
+		"phpunit/phpunit": "3.7.37",
+		"mockery/mockery": "0.9.2"
+	}
+}
